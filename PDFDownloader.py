@@ -60,7 +60,7 @@ for link in soupParser.find_all('a'):
             '''newURL=baseUrl+'/'+resourceName
             print(newURL)
             '''
-            file= requests.get(resourceName)
+            file= requests.get('http://'+resourceName)
             if(file.status_code==200):
                 #Salvo il file in locale
                 localeFile= open(fileName,'wb+')
